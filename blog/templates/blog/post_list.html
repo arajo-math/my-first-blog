@@ -6,15 +6,19 @@
         <div>
             <h1><a href="/">Ara's blog</a></h1>
         </div>
-        <div>
-            <p>published: 05.10.2019, 05:02</p>
-            <h2><a href="">My first post</a></h2>
-            <p>This is Ara's first blog. Which styles are you most interested in? Choose 2 styles below.</p>
+
+    {% for post in posts %}
+         <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}.</p>
         </div>
+    {% endfor %}
         <div>
-            <p>published: 05.10.2019, 05:02</p>
-            <h2><a href="">My second post</a></h2>
-            <p>What's your favorite restaurants in San Diego? Comment below.</p>
+            <p>published: 05.10.2019, 11:02</p>
+            <h2><a href="">Special post</a></h2>
+            <p>Let's do some pole jam! Who's interested in?</p>
         </div>
+
      </body>
 </html>
